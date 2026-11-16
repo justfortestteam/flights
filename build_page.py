@@ -59,6 +59,42 @@ def asia_card(i, r):
             f'<div class="meta">{day(r["depart"])} → {day(r["return"])} · {al(r["depart"], r["return"])} 日 AL · {e(r["airline"])}</div>'
             f'<div class="lk">{link(r.get("link"), "去 Kiwi.com 睇")}</div></div>')
 
+def calendar(d):
+    import calendar as C
+    ev = {}
+    def add(dep, ret, city, price, kind, lk, grp):
+        n = (dt.date.fromisoformat(ret[:10]) - dt.date.fromisoformat(dep[:10])).days
+        ev.setdefault(dep[:10], []).append((price, city, kind, n, ret, lk, grp))
+    for r in d["japan"]:
+        for k in ("bag", "nobag"):
+            m = r.get(k)
+            if m: add(m["depart"], m["return"], r["city"], m["price"], k, m.get("link"), "jp")
+    for r in d["asia"]:
+        add(r["depart"], r["return"], r["city"], r["price"], "bag", r.get("link"), "as")
+    if not ev: return '<p class="sub">冇資料。</p>'
+    first = min(ev); last = max(ev)
+    y, mth = int(first[:4]), int(first[5:7])
+    ly, lm = int(last[:4]), int(last[5:7])
+    out = []
+    while (y, mth) <= (ly, lm):
+        rows = []
+        for week in C.Calendar(firstweekday=6).monthdatescalendar(y, mth):
+            cells = []
+            for x in week:
+                iso = x.isoformat()
+                cls = ['out'] if x.month != mth else []
+                if iso in HOL or x.weekday() == 6: cls.append('hol')
+                items = ''.join(
+                    f'<a class="ev {g}" href="{e(lk)}" target="_blank" rel="noopener" title="{e(c)} HK${p:,}，{n} 晚，回程 {day(ret)}">'
+                    f'<b>{e(c.split(" ")[0])}</b> ${p:,}<i>{"連行李" if k == "bag" else "手提"}·{n}晚</i></a>'
+                    for p, c, k, n, ret, lk, g in sorted(ev.get(iso, []))) if x.month == mth else ''
+                cells.append(f'<td class="{" ".join(cls)}"><span class="dn">{x.day}</span>{items}</td>')
+            rows.append('<tr>' + ''.join(cells) + '</tr>')
+        out.append(f'<h3>{y} 年 {mth} 月</h3><div class="calwrap"><table class="cal"><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
+        mth += 1
+        if mth == 13: y, mth = y + 1, 1
+    return ''.join(out)
+
 d = json.load(open('data.json', encoding='utf-8'))
 page = f'''<!DOCTYPE html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>香港出發平機票</title><style>
 body{{font-family:"Noto Sans HK","PingFang HK","Microsoft JhengHei",sans-serif;margin:0;padding:20px;background:#f6f5f1;color:#1f1e1d}}
@@ -71,12 +107,27 @@ h1{{font-size:24px;margin:0 0 4px}} h2{{font-size:18px;margin:24px 0 4px}} .sub{
 .warn{{font-size:11px;color:#b3392b}} .meta{{font-size:13px}} .alt{{font-size:12px;color:#6b6a66;border-top:1px solid #eee;margin-top:6px;padding-top:6px;line-height:1.6}} .alt b{{color:#1f1e1d}}
 .lk{{font-size:12px;margin-top:6px}}
 .seg{{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 10px}} .seg button{{font:inherit;font-size:13px;padding:6px 14px;border-radius:99px;border:1px solid #cfccc3;background:#fff;color:#1f1e1d;cursor:pointer}}
+h3{{font-size:15px;margin:18px 0 6px}}
+.calwrap{{overflow-x:auto}} .cal{{border-collapse:collapse;width:100%;min-width:620px;table-layout:fixed;background:#fff}}
+.cal th{{font-size:12px;color:#6b6a66;font-weight:500;padding:4px;border:1px solid #e3e1da;background:#faf9f6}}
+.cal td{{vertical-align:top;border:1px solid #e3e1da;height:72px;padding:3px;font-size:11px}}
+.cal td.out{{background:#f6f5f1;color:#bbb}} .cal td.hol .dn{{color:#b3392b;font-weight:600}} .dn{{font-size:11px;color:#6b6a66}}
+.ev{{display:block;margin-top:2px;padding:2px 4px;border-radius:5px;text-decoration:none;color:#1f1e1d;line-height:1.3;font-size:11px}}
+.ev.jp{{background:#e7f1ea}} .ev.as{{background:#eef0f7}} .ev b{{font-weight:600}} .ev i{{display:block;font-style:normal;color:#6b6a66;font-size:10px}}
 .seg button[aria-pressed="true"]{{background:#1f1e1d;color:#fff;border-color:#1f1e1d}} a{{color:#1f1e1d}} .foot{{font-size:11px;color:#8a8984;margin-top:20px;line-height:1.6}}
 </style></head><body>
 <h1>香港出發平機票</h1>
 <p class="sub">Kiwi.com 查價時間：{e(d["checked_at"])}（每個工作日早上更新）。來回、直航、玩 3 至 5 晚，價錢已包稅同附加費（港幣）。</p>
+<div class="seg view" role="tablist">
+<button data-view="cards" aria-pressed="true">卡片</button><button data-view="cal" aria-pressed="false">月曆</button>
+</div>
+<div id="view-cal" hidden>
+<p class="sub">按出發日排。紅字日子係星期日或者香港公眾假期。<span class="ev jp" style="display:inline-block">日本</span> <span class="ev as" style="display:inline-block">亞洲其他</span>；撳一格去 Kiwi.com 睇。</p>
+{calendar(d)}
+</div>
+<div id="view-cards">
 <h2>日本</h2>
-<div class="seg" role="tablist">
+<div class="seg jpseg" role="tablist">
 <button data-v="all" aria-pressed="true">全部</button><button data-v="bag" aria-pressed="false">只睇連寄艙行李</button><button data-v="nobag" aria-pressed="false">只睇唔連寄艙行李</button>
 </div>
 <div id="v-all"><p class="sub">大字係連 1 件寄艙行李嘅價錢；細字係唔連寄艙行李（只有手提）嘅價錢。</p><div class="grid">{"".join(jp_card(r) for r in d["japan"])}</div></div>
@@ -84,11 +135,15 @@ h1{{font-size:24px;margin:0 0 4px}} h2{{font-size:18px;margin:24px 0 4px}} .sub{
 <div id="v-nobag" hidden><p class="sub">唔連寄艙行李（只有手提），由平至貴。要寄行李就要另外加錢。</p><div class="grid">{"".join(one_card(r, "nobag") for r in sorted([x for x in d["japan"] if x.get("nobag")], key=lambda x: x["nobag"]["price"]))}</div></div>
 <h2>亞洲最平 10 個城市（連寄艙行李）</h2>
 <div class="grid">{"".join(asia_card(i + 1, r) for i, r in enumerate(d["asia"]))}</div>
+</div>
 <p class="foot">價錢以查價時為準，隨時會變，訂票前請喺航空公司官網再核實。「兩張單程票」即去程同回程分開出票，去程延誤唔保障回程。AL 按星期一至五上班計，已扣香港公眾假期，出發日同回程日都計一整日。</p>
 <script>
-document.querySelectorAll('.seg button').forEach(function(b){{b.addEventListener('click',function(){{
-document.querySelectorAll('.seg button').forEach(function(x){{x.setAttribute('aria-pressed',x===b?'true':'false')}});
+document.querySelectorAll('.jpseg button').forEach(function(b){{b.addEventListener('click',function(){{
+document.querySelectorAll('.jpseg button').forEach(function(x){{x.setAttribute('aria-pressed',x===b?'true':'false')}});
 ['all','bag','nobag'].forEach(function(v){{document.getElementById('v-'+v).hidden=(v!==b.dataset.v)}});}})}});
+document.querySelectorAll('.view button').forEach(function(b){{b.addEventListener('click',function(){{
+document.querySelectorAll('.view button').forEach(function(x){{x.setAttribute('aria-pressed',x===b?'true':'false')}});
+document.getElementById('view-cards').hidden=b.dataset.view!=='cards';document.getElementById('view-cal').hidden=b.dataset.view!=='cal';}})}});
 </script>
 </body></html>'''
 open('index.html', 'w', encoding='utf-8').write(page)
