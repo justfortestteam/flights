@@ -61,36 +61,44 @@ def asia_card(i, r):
 
 def calendar(d):
     import calendar as C
-    ev = {}
+    trips = []
     def add(dep, ret, city, price, kind, lk, grp):
-        n = (dt.date.fromisoformat(ret[:10]) - dt.date.fromisoformat(dep[:10])).days
-        ev.setdefault(dep[:10], []).append((price, city, kind, n, ret, lk, grp))
+        a, b = dt.date.fromisoformat(dep[:10]), dt.date.fromisoformat(ret[:10])
+        trips.append((a, b, price, city, kind, lk, grp))
     for r in d["japan"]:
         for k in ("bag", "nobag"):
             m = r.get(k)
             if m: add(m["depart"], m["return"], r["city"], m["price"], k, m.get("link"), "jp")
     for r in d["asia"]:
         add(r["depart"], r["return"], r["city"], r["price"], "bag", r.get("link"), "as")
-    if not ev: return '<p class="sub">冇資料。</p>'
-    first = min(ev); last = max(ev)
-    y, mth = int(first[:4]), int(first[5:7])
-    ly, lm = int(last[:4]), int(last[5:7])
+    if not trips: return '<p class="sub">冇資料。</p>'
+    trips.sort(key=lambda t: (t[0], t[2]))
+    first = min(t[0] for t in trips); last = max(t[1] for t in trips)
+    y, mth = first.year, first.month
     out = []
-    while (y, mth) <= (ly, lm):
-        rows = []
+    while (y, mth) <= (last.year, last.month):
+        weeks = []
         for week in C.Calendar(firstweekday=6).monthdatescalendar(y, mth):
-            cells = []
-            for x in week:
-                iso = x.isoformat()
-                cls = ['out'] if x.month != mth else []
-                if iso in HOL or x.weekday() == 6: cls.append('hol')
-                items = ''.join(
-                    f'<a class="ev {g}" href="{e(lk)}" target="_blank" rel="noopener" title="{e(c)} HK${p:,}，{n} 晚，回程 {day(ret)}">'
-                    f'<b>{e(c.split(" ")[0])}</b> ${p:,}<i>{"連行李" if k == "bag" else "手提"}·{n}晚</i></a>'
-                    for p, c, k, n, ret, lk, g in sorted(ev.get(iso, []))) if x.month == mth else ''
-                cells.append(f'<td class="{" ".join(cls)}"><span class="dn">{x.day}</span>{items}</td>')
-            rows.append('<tr>' + ''.join(cells) + '</tr>')
-        out.append(f'<h3>{y} 年 {mth} 月</h3><div class="calwrap"><table class="cal"><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
+            ws, we = week[0], week[-1]
+            days = ''.join(
+                f'<div class="dn{" out" if x.month != mth else ""}{" hol" if (x.isoformat() in HOL or x.weekday() == 6) else ""}">{x.day}</div>'
+                for x in week)
+            bars = []
+            for a, b, price, city, kind, lk, grp in trips:
+                if b < ws or a > we: continue
+                s0, s1 = max(a, ws), min(b, we)
+                c0, c1 = (s0 - ws).days + 1, (s1 - ws).days + 2
+                n = (b - a).days
+                name = city.split(" ")[0]
+                tagk = "連行李" if kind == "bag" else "手提"
+                cont_l = '◀ ' if a < ws else ''
+                cont_r = ' ▶' if b > we else ''
+                label = (f'<b>{e(name)}</b> ${price:,} <i>{tagk}·{n}晚</i>' if a >= ws else f'<b>{e(name)}</b> <i>續</i>')
+                tip = f'{city} HK${price:,}，{day(a.isoformat())} → {day(b.isoformat())}，{n} 晚，{tagk}'
+                href = e(lk) if str(lk or '').startswith('https://') else '#'
+                bars.append(f'<a class="bar {grp}{" nb" if kind != "bag" else ""}" style="grid-column:{c0}/{c1}" href="{href}" target="_blank" rel="noopener" title="{e(tip)}">{cont_l}{label}{cont_r}</a>')
+            weeks.append(f'<div class="wk"><div class="days">{days}</div><div class="bars">{"".join(bars)}</div></div>')
+        out.append(f'<h3>{y} 年 {mth} 月</h3><div class="calwrap"><div class="cal"><div class="hd"><div>日</div><div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div></div>{"".join(weeks)}</div></div>')
         mth += 1
         if mth == 13: y, mth = y + 1, 1
     return ''.join(out)
@@ -108,12 +116,16 @@ h1{{font-size:24px;margin:0 0 4px}} h2{{font-size:18px;margin:24px 0 4px}} .sub{
 .lk{{font-size:12px;margin-top:6px}}
 .seg{{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 10px}} .seg button{{font:inherit;font-size:13px;padding:6px 14px;border-radius:99px;border:1px solid #cfccc3;background:#fff;color:#1f1e1d;cursor:pointer}}
 h3{{font-size:15px;margin:18px 0 6px}}
-.calwrap{{overflow-x:auto}} .cal{{border-collapse:collapse;width:100%;min-width:620px;table-layout:fixed;background:#fff}}
-.cal th{{font-size:12px;color:#6b6a66;font-weight:500;padding:4px;border:1px solid #e3e1da;background:#faf9f6}}
-.cal td{{vertical-align:top;border:1px solid #e3e1da;height:72px;padding:3px;font-size:11px}}
-.cal td.out{{background:#f6f5f1;color:#bbb}} .cal td.hol .dn{{color:#b3392b;font-weight:600}} .dn{{font-size:11px;color:#6b6a66}}
-.ev{{display:block;margin-top:2px;padding:2px 4px;border-radius:5px;text-decoration:none;color:#1f1e1d;line-height:1.3;font-size:11px}}
-.ev.jp{{background:#e7f1ea}} .ev.as{{background:#eef0f7}} .ev b{{font-weight:600}} .ev i{{display:block;font-style:normal;color:#6b6a66;font-size:10px}}
+.calwrap{{overflow-x:auto}} .cal{{min-width:640px;background:#fff;border:1px solid #e3e1da;border-radius:8px;overflow:hidden}}
+.hd,.days,.bars{{display:grid;grid-template-columns:repeat(7,1fr)}}
+.hd div{{font-size:12px;color:#6b6a66;padding:4px 6px;background:#faf9f6;border-bottom:1px solid #e3e1da}}
+.wk{{border-bottom:1px solid #eeece6;min-height:56px;padding-bottom:4px}} .wk:last-child{{border-bottom:0}}
+.dn{{font-size:11px;color:#6b6a66;padding:3px 6px}} .dn.out{{color:#c9c7c0}} .dn.hol{{color:#b3392b;font-weight:600}}
+.bars{{grid-auto-flow:row dense;gap:2px 0;padding:0 2px}}
+.bar{{display:block;margin:0 2px;padding:2px 6px;border-radius:5px;text-decoration:none;color:#1f1e1d;font-size:11px;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.bar.jp{{background:#d9ecdf}} .bar.as{{background:#dde2f2}} .bar.nb{{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.55) 6px 9px)}}
+.bar b{{font-weight:600}} .bar i{{font-style:normal;color:#55544f}}
+.legend{{display:inline-block;padding:1px 8px;border-radius:5px;font-size:11px}}
 .seg button[aria-pressed="true"]{{background:#1f1e1d;color:#fff;border-color:#1f1e1d}} a{{color:#1f1e1d}} .foot{{font-size:11px;color:#8a8984;margin-top:20px;line-height:1.6}}
 </style></head><body>
 <h1>香港出發平機票</h1>
@@ -122,7 +134,7 @@ h3{{font-size:15px;margin:18px 0 6px}}
 <button data-view="cards" aria-pressed="true">卡片</button><button data-view="cal" aria-pressed="false">月曆</button>
 </div>
 <div id="view-cal" hidden>
-<p class="sub">按出發日排。紅字日子係星期日或者香港公眾假期。<span class="ev jp" style="display:inline-block">日本</span> <span class="ev as" style="display:inline-block">亞洲其他</span>；撳一格去 Kiwi.com 睇。</p>
+<p class="sub">每條橫條由出發日拉到回程日。<span class="legend bar jp">日本</span> <span class="legend bar as">亞洲其他</span> <span class="legend bar jp nb">斜紋 = 唔連寄艙行李</span>；紅字日子係星期日或者香港公眾假期；撳橫條去 Kiwi.com 睇。</p>
 {calendar(d)}
 </div>
 <div id="view-cards">
