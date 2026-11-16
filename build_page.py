@@ -4,7 +4,8 @@ data.json shape:
  "japan": [{"city": "沖繩 Okinawa",
             "bag":   {"price": 2168, "depart": "2027-04-16", "return": "2027-04-20", "airline": "香港航空", "note": "", "link": "https://..."} or null,
             "nobag": {same fields} or null}],
- "asia":  [{"city": "上海 Shanghai", "price": 1375, "depart": "...", "return": "...", "airline": "...", "note": "", "link": "..."}]}
+ "asia":  [{"city": "上海 Shanghai", "price": 1375, "depart": "...", "return": "...", "airline": "...", "note": "", "link": "..."}],
+ "world": [{"city": "倫敦 London", "price": 5268, "depart": "...", "return": "...", "airline": "...", "stops": "直航 or 經北京轉機", "note": "", "link": "..."}]}
 """
 import datetime as dt, html, json
 
@@ -52,6 +53,15 @@ def one_card(r, k):
             f'<div class="meta">{day(m["depart"])} → {day(m["return"])} · {al(m["depart"], m["return"])} 日 AL · {e(m["airline"])}</div>'
             f'<div class="lk">{link(m.get("link"), "去 Kiwi.com 睇")}</div></div>')
 
+def world_card(i, r):
+    warn = f' <span class="warn">⚠ {e(r["note"])}</span>' if r.get('note') else ''
+    n = (dt.date.fromisoformat(r["return"][:10]) - dt.date.fromisoformat(r["depart"][:10])).days
+    return (f'<div class="card"><div class="city">{e(r["city"])}<span class="rk">#{i}</span></div>'
+            f'<div class="pr"><span class="big">HK${r["price"]:,}</span><span class="tag">連寄艙行李</span>{warn}</div>'
+            f'<div class="meta">{day(r["depart"])} → {day(r["return"])} · {n} 晚 · {al(r["depart"], r["return"])} 日 AL</div>'
+            f'<div class="meta">{e(r["airline"])} · {e(r.get("stops"))}</div>'
+            f'<div class="lk">{link(r.get("link"), "去 Kiwi.com 睇")}</div></div>')
+
 def asia_card(i, r):
     warn = f' <span class="warn">⚠ {e(r["note"])}</span>' if r.get('note') else ''
     return (f'<div class="card"><div class="city">{e(r["city"])}<span class="rk">#{i}</span></div>'
@@ -71,6 +81,8 @@ def calendar(d):
             if m: add(m["depart"], m["return"], r["city"], m["price"], k, m.get("link"), "jp")
     for r in d["asia"]:
         add(r["depart"], r["return"], r["city"], r["price"], "bag", r.get("link"), "as")
+    for r in d.get("world", []):
+        add(r["depart"], r["return"], r["city"], r["price"], "bag", r.get("link"), "ww")
     if not trips: return '<p class="sub">冇資料。</p>'
     trips.sort(key=lambda t: (t[0], t[2]))
     first = min(t[0] for t in trips); last = max(t[1] for t in trips)
@@ -123,7 +135,7 @@ h3{{font-size:15px;margin:18px 0 6px}}
 .dn{{font-size:11px;color:#6b6a66;padding:3px 6px}} .dn.out{{color:#c9c7c0}} .dn.hol{{color:#b3392b;font-weight:600}}
 .bars{{grid-auto-flow:row dense;gap:2px 0;padding:0 2px}}
 .bar{{display:block;margin:0 2px;padding:2px 6px;border-radius:5px;text-decoration:none;color:#1f1e1d;font-size:11px;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-.bar.jp{{background:#d9ecdf}} .bar.as{{background:#dde2f2}} .bar.nb{{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.55) 6px 9px)}}
+.bar.jp{{background:#d9ecdf}} .bar.as{{background:#dde2f2}} .bar.ww{{background:#f3e3cf}} .bar.nb{{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.55) 6px 9px)}}
 .bar b{{font-weight:600}} .bar i{{font-style:normal;color:#55544f}}
 .legend{{display:inline-block;padding:1px 8px;border-radius:5px;font-size:11px}}
 @media (max-width:600px){{
@@ -145,7 +157,7 @@ body{{padding:12px}} h1{{font-size:20px}} h2{{font-size:16px;margin-top:18px}} h
 <button data-view="cards" aria-pressed="true">卡片</button><button data-view="cal" aria-pressed="false">月曆</button>
 </div>
 <div id="view-cal" hidden>
-<p class="sub">每條橫條由出發日拉到回程日。<span class="legend bar jp">日本</span> <span class="legend bar as">亞洲其他</span> <span class="legend bar jp nb">斜紋 = 唔連寄艙行李</span>；紅字日子係星期日或者香港公眾假期；撳橫條去 Kiwi.com 睇。</p>
+<p class="sub">每條橫條由出發日拉到回程日。<span class="legend bar jp">日本</span> <span class="legend bar as">亞洲其他</span> <span class="legend bar ww">亞洲以外</span> <span class="legend bar jp nb">斜紋 = 唔連寄艙行李</span>；紅字日子係星期日或者香港公眾假期；撳橫條去 Kiwi.com 睇。</p>
 {calendar(d)}
 </div>
 <div id="view-cards">
@@ -158,6 +170,9 @@ body{{padding:12px}} h1{{font-size:20px}} h2{{font-size:16px;margin-top:18px}} h
 <div id="v-nobag" hidden><p class="sub">唔連寄艙行李（只有手提），由平至貴。要寄行李就要另外加錢。</p><div class="grid">{"".join(one_card(r, "nobag") for r in sorted([x for x in d["japan"] if x.get("nobag")], key=lambda x: x["nobag"]["price"]))}</div></div>
 <h2>亞洲最平 10 個城市（連寄艙行李）</h2>
 <div class="grid">{"".join(asia_card(i + 1, r) for i, r in enumerate(d["asia"]))}</div>
+<h2>亞洲以外最平 10 個城市（連寄艙行李）</h2>
+<p class="sub">歐洲、澳紐、美加等；玩 5 至 10 晚；最多轉機一次，同一張票（除咗標明「兩張單程票」）。</p>
+<div class="grid">{"".join(world_card(i + 1, r) for i, r in enumerate(d.get("world", [])))}</div>
 </div>
 <p class="foot">價錢以查價時為準，隨時會變，訂票前請喺航空公司官網再核實。「兩張單程票」即去程同回程分開出票，去程延誤唔保障回程。AL 按星期一至五上班計，已扣香港公眾假期，出發日同回程日都計一整日。</p>
 <script>

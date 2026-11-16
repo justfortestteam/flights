@@ -260,5 +260,107 @@
    "note": "",
    "link": "https://kiwi.com/u/s3tjdt"
   }
+ ],
+ "world": [
+  {
+   "city": "墨爾本 Melbourne",
+   "price": 4510,
+   "depart": "2027-03-01",
+   "return": "2027-03-09",
+   "airline": "香港航空",
+   "stops": "直航",
+   "note": "",
+   "link": "https://kiwi.com/u/6fug7z"
+  },
+  {
+   "city": "悉尼 Sydney",
+   "price": 4602,
+   "depart": "2027-03-02",
+   "return": "2027-03-10",
+   "airline": "香港航空",
+   "stops": "直航",
+   "note": "",
+   "link": "https://kiwi.com/u/58d4v6"
+  },
+  {
+   "city": "伊斯坦堡 Istanbul",
+   "price": 4727,
+   "depart": "2027-01-12",
+   "return": "2027-01-20",
+   "airline": "土耳其航空",
+   "stops": "直航",
+   "note": "",
+   "link": "https://kiwi.com/u/7w6yw9"
+  },
+  {
+   "city": "米蘭 Milan",
+   "price": 5105,
+   "depart": "2026-11-26",
+   "return": "2026-12-04",
+   "airline": "海南航空",
+   "stops": "經重慶轉機",
+   "note": "",
+   "link": "https://kiwi.com/u/d6xgqk"
+  },
+  {
+   "city": "倫敦 London",
+   "price": 5268,
+   "depart": "2027-03-03",
+   "return": "2027-03-09",
+   "airline": "海南航空 / 南航",
+   "stops": "去程經海口、回程經北京",
+   "note": "兩張單程票",
+   "link": "https://kiwi.com/u/u9xtwsv"
+  },
+  {
+   "city": "都柏林 Dublin",
+   "price": 5381,
+   "depart": "2026-11-21",
+   "return": "2026-12-01",
+   "airline": "法航 / 荷航",
+   "stops": "去程經巴黎、回程經阿姆斯特丹",
+   "note": "",
+   "link": "https://kiwi.com/u/kdxu3t"
+  },
+  {
+   "city": "赫爾辛基 Helsinki",
+   "price": 5418,
+   "depart": "2026-11-21",
+   "return": "2026-11-28",
+   "airline": "南航",
+   "stops": "經北京轉機",
+   "note": "",
+   "link": "https://kiwi.com/u/q8mkbgt"
+  },
+  {
+   "city": "馬德里 Madrid",
+   "price": 5431,
+   "depart": "2026-12-22",
+   "return": "2026-12-31",
+   "airline": "海南航空",
+   "stops": "經重慶轉機",
+   "note": "兩張單程票",
+   "link": "https://kiwi.com/u/kbzqhfm"
+  },
+  {
+   "city": "溫哥華 Vancouver",
+   "price": 5749,
+   "depart": "2026-11-20",
+   "return": "2026-11-29",
+   "airline": "香港航空",
+   "stops": "直航",
+   "note": "",
+   "link": "https://kiwi.com/u/cw4u2d"
+  },
+  {
+   "city": "柏林 Berlin",
+   "price": 5815,
+   "depart": "2026-11-25",
+   "return": "2026-12-06",
+   "airline": "海南航空",
+   "stops": "經北京轉機",
+   "note": "",
+   "link": "https://kiwi.com/u/vyhdd7"
+  }
  ]
 }
