@@ -182,14 +182,14 @@ body{{padding:12px}} h1{{font-size:20px}} h2{{font-size:16px;margin-top:18px}} h
 <h1>香港出發平機票</h1>
 <p class="sub">Kiwi.com 查價時間：{e(d["checked_at"])}（每個工作日早上更新）。來回、直航、玩 3 至 5 晚，價錢已包稅同附加費（港幣）。</p>
 <div class="seg view" role="tablist">
-<button data-view="cards" aria-pressed="true">卡片</button><button data-view="cal" aria-pressed="false">月曆</button><button data-view="hk" aria-pressed="false">國泰・港航・大灣區・HK Express</button>
+<button data-view="cards" aria-pressed="true">卡片</button><button data-view="cal" aria-pressed="false">月曆</button><button data-view="hk" aria-pressed="false">Local Airline</button>
 </div>
 <div id="view-cal" hidden>
 <p class="sub">每條橫條由出發日拉到回程日。<span class="legend bar jp">日本</span> <span class="legend bar as">亞洲其他</span> <span class="legend bar ww">亞洲以外</span> <span class="legend bar jp nb">斜紋 = 唔連寄艙行李</span>；紅字日子係星期日或者香港公眾假期；撳橫條去 Kiwi.com 睇。</p>
 {calendar(d)}
 </div>
 <div id="view-hk" hidden>
-<h2>國泰、香港航空、大灣區航空、HK Express</h2>
+<h2>Local Airline：國泰、香港航空、大灣區航空、HK Express</h2>
 <p class="sub">日本、台灣、曼谷、首爾；直航來回、玩 3 至 5 晚、國泰、香港航空、大灣區航空嘅價錢已連 1 件寄艙行李，綠色係三間之中最平。HK Express 嘅價錢冇寄艙行李（只有 1 件隨身物品），行李要另加，所以唔同其他三間直接比較。撳一行去 Kiwi.com 睇。</p>
 <div class="grid">{"".join(hk_card(r) for r in sorted(d.get("hk_airlines", []), key=lambda r: (min([o["price"] for k, o in r["options"].items() if o and k != "UO"] or [99999]), min([o["price"] for o in r["options"].values() if o] or [99999]))))}</div>
 </div>
