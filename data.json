@@ -393,6 +393,15 @@
      "in": "HB705 21:40",
      "note": "兩張單程票",
      "link": "https://kiwi.com/u/wg98fj"
+    },
+    "UO": {
+     "price": 1139,
+     "depart": "2026-12-14",
+     "return": "2026-12-17",
+     "out": "UO112 12:10",
+     "in": "UO111 13:55",
+     "note": "",
+     "link": "https://kiwi.com/u/nhgff3"
     }
    }
   },
@@ -417,7 +426,16 @@
      "note": "",
      "link": "https://kiwi.com/u/udxpjs"
     },
-    "HB": null
+    "HB": null,
+    "UO": {
+     "price": 1133,
+     "depart": "2026-12-16",
+     "return": "2026-12-19",
+     "out": "UO134 18:50",
+     "in": "UO135 21:00",
+     "note": "",
+     "link": "https://kiwi.com/u/z8q6wqm"
+    }
    }
   },
   {
@@ -449,6 +467,15 @@
      "in": "HB296 01:45",
      "note": "兩張單程票",
      "link": "https://kiwi.com/u/tucmvv"
+    },
+    "UO": {
+     "price": 1555,
+     "depart": "2027-02-28",
+     "return": "2027-03-04",
+     "out": "UO704 07:50",
+     "in": "UO713 12:00",
+     "note": "",
+     "link": "https://kiwi.com/u/8rvn9zf"
     }
    }
   },
@@ -473,7 +500,16 @@
      "note": "",
      "link": "https://kiwi.com/u/6fjg7y"
     },
-    "HB": null
+    "HB": null,
+    "UO": {
+     "price": 1793,
+     "depart": "2027-01-19",
+     "return": "2027-01-22",
+     "out": "UO616 01:15",
+     "in": "UO627 21:50",
+     "note": "",
+     "link": "https://kiwi.com/u/c3bk9v"
+    }
    }
   },
   {
@@ -497,6 +533,15 @@
      "in": "HB337 14:10",
      "note": "兩張單程票",
      "link": "https://kiwi.com/u/728wdb"
+    },
+    "UO": {
+     "price": 1991,
+     "depart": "2026-12-09",
+     "return": "2026-12-14",
+     "out": "UO824 15:50",
+     "in": "UO821 11:55",
+     "note": "",
+     "link": "https://kiwi.com/u/6hz4mq6"
     }
    }
   },
@@ -529,6 +574,15 @@
      "in": "HB2581 00:45",
      "note": "兩張單程票",
      "link": "https://kiwi.com/u/m23fg9"
+    },
+    "UO": {
+     "price": 2618,
+     "depart": "2026-12-11",
+     "return": "2026-12-16",
+     "out": "UO862 15:45",
+     "in": "UO863 21:15",
+     "note": "",
+     "link": "https://kiwi.com/u/vpny3m"
     }
    }
   },
@@ -561,6 +615,15 @@
      "in": "HB313 14:00",
      "note": "兩張單程票",
      "link": "https://kiwi.com/u/c9ug6uk"
+    },
+    "UO": {
+     "price": 2004,
+     "depart": "2026-12-16",
+     "return": "2026-12-20",
+     "out": "UO694 15:55",
+     "in": "UO867 08:10",
+     "note": "",
+     "link": "https://kiwi.com/u/7htnzz"
     }
    }
   },
@@ -593,6 +656,15 @@
      "in": "HB321 15:10",
      "note": "兩張單程票",
      "link": "https://kiwi.com/u/ru9sqg"
+    },
+    "UO": {
+     "price": 2233,
+     "depart": "2027-01-25",
+     "return": "2027-01-29",
+     "out": "UO628 19:55 羽田",
+     "in": "UO647 19:00 成田",
+     "note": "",
+     "link": "https://kiwi.com/u/dbnfsp"
     }
    }
   },
@@ -625,7 +697,8 @@
      "in": "HB2887 08:00",
      "note": "",
      "link": "https://kiwi.com/u/g8tmnmk"
-    }
+    },
+    "UO": null
    }
   },
   {
@@ -641,6 +714,15 @@
      "in": "HB361 16:20",
      "note": "兩張單程票",
      "link": "https://kiwi.com/u/nfbk6vn"
+    },
+    "UO": {
+     "price": 2727,
+     "depart": "2027-01-27",
+     "return": "2027-02-01",
+     "out": "UO890 09:00",
+     "in": "UO891 15:00",
+     "note": "",
+     "link": "https://kiwi.com/u/m6yvws4"
     }
    }
   },
@@ -657,7 +739,101 @@
      "link": "https://kiwi.com/u/ws8g6f2"
     },
     "HX": null,
-    "HB": null
+    "HB": null,
+    "UO": {
+     "price": 2501,
+     "depart": "2027-01-19",
+     "return": "2027-01-23",
+     "out": "UO680 10:00",
+     "in": "UO681 15:25",
+     "note": "",
+     "link": "https://kiwi.com/u/k98xpb"
+    }
+   }
+  },
+  {
+   "city": "台中 Taichung",
+   "options": {
+    "CX": null,
+    "HX": null,
+    "HB": null,
+    "UO": {
+     "price": 1125,
+     "depart": "2026-12-21",
+     "return": "2026-12-25",
+     "out": "UO192 07:50",
+     "in": "UO183 20:35",
+     "note": "",
+     "link": "https://kiwi.com/u/yg3d82"
+    }
+   }
+  },
+  {
+   "city": "廣島 Hiroshima",
+   "options": {
+    "CX": null,
+    "HX": null,
+    "HB": null,
+    "UO": {
+     "price": 2445,
+     "depart": "2027-01-13",
+     "return": "2027-01-16",
+     "out": "UO822 09:30",
+     "in": "UO823 14:40",
+     "note": "",
+     "link": "https://kiwi.com/u/42jhq9"
+    }
+   }
+  },
+  {
+   "city": "高松 Takamatsu",
+   "options": {
+    "CX": null,
+    "HX": null,
+    "HB": null,
+    "UO": {
+     "price": 2468,
+     "depart": "2027-01-04",
+     "return": "2027-01-08",
+     "out": "UO642 09:20",
+     "in": "UO643 14:30",
+     "note": "",
+     "link": "https://kiwi.com/u/c9cmbnw"
+    }
+   }
+  },
+  {
+   "city": "石垣 Ishigaki",
+   "options": {
+    "CX": null,
+    "HX": null,
+    "HB": null,
+    "UO": {
+     "price": 2656,
+     "depart": "2027-04-17",
+     "return": "2027-04-22",
+     "out": "UO858 07:40",
+     "in": "UO879 11:30",
+     "note": "",
+     "link": "https://kiwi.com/u/mkpjp22"
+    }
+   }
+  },
+  {
+   "city": "小松 Komatsu",
+   "options": {
+    "CX": null,
+    "HX": null,
+    "HB": null,
+    "UO": {
+     "price": 2803,
+     "depart": "2027-01-28",
+     "return": "2027-02-02",
+     "out": "UO814 09:30",
+     "in": "UO815 14:50",
+     "note": "",
+     "link": "https://kiwi.com/u/k59ws8"
+    }
    }
   }
  ]

@@ -63,11 +63,11 @@ def world_card(i, r):
             f'<div class="meta">{e(r["airline"])} · {e(r.get("stops"))}</div>'
             f'<div class="lk">{link(r.get("link"), "去 Kiwi.com 睇")}</div></div>')
 
-AIRS = [("CX", "國泰"), ("HX", "香港航空"), ("HB", "大灣區航空")]
+AIRS = [("CX", "國泰"), ("HX", "香港航空"), ("HB", "大灣區航空"), ("UO", "HK Express")]
 
 def hk_card(r):
     opts = r["options"]
-    prices = [opts[c]["price"] for c, _ in AIRS if opts.get(c)]
+    prices = [opts[c]["price"] for c, _ in AIRS if opts.get(c) and c != "UO"]
     best = min(prices) if prices else None
     rows = []
     for code, name in AIRS:
@@ -78,6 +78,9 @@ def hk_card(r):
         hi = ' best' if m["price"] == best else ''
         n = (dt.date.fromisoformat(m["return"][:10]) - dt.date.fromisoformat(m["depart"][:10])).days
         note = f' · <span class="warn">{e(m["note"])}</span>' if m.get("note") else ''
+        if code == "UO":
+            hi = ' lcc'
+            note += ' · <span class="warn">冇寄艙行李，要另加</span>'
         rows.append(f'<a class="al-row{hi}" href="{e(m["link"])}" target="_blank" rel="noopener"><span class="al-n">{name}</span>'
                     f'<span class="al-p">HK${m["price"]:,}</span>'
                     f'<span class="al-d">{day(m["depart"])} → {day(m["return"])} · {n} 晚 · {al(m["depart"], m["return"])} 日 AL{note}<br>去 {e(m["out"])} · 回 {e(m["in"])}</span></a>')
@@ -159,7 +162,7 @@ h3{{font-size:15px;margin:18px 0 6px}}
 .bar.jp{{background:#d9ecdf}} .bar.as{{background:#dde2f2}} .bar.ww{{background:#f3e3cf}} .bar.nb{{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.55) 6px 9px)}}
 .bar b{{font-weight:600}} .bar i{{font-style:normal;color:#55544f}}
 .al-row{{display:grid;grid-template-columns:80px auto;column-gap:8px;padding:6px 8px;margin-top:6px;border:1px solid #eeece6;border-radius:8px;text-decoration:none;color:#1f1e1d}}
-.al-row.best{{border-color:#3d8b4f;background:#eef6f0}} .al-row.none{{color:#9a988f}}
+.al-row.best{{border-color:#3d8b4f;background:#eef6f0}} .al-row.none{{color:#9a988f}} .al-row.lcc{{border-style:dashed;background:#faf8f3}}
 .al-n{{font-size:13px;font-weight:600}} .al-p{{font-size:16px;font-weight:600;text-align:right}} .al-row.none .al-p{{font-size:12px;font-weight:400}}
 .al-d{{grid-column:1/3;font-size:12px;color:#6b6a66;line-height:1.5}}
 .legend{{display:inline-block;padding:1px 8px;border-radius:5px;font-size:11px}}
@@ -179,16 +182,16 @@ body{{padding:12px}} h1{{font-size:20px}} h2{{font-size:16px;margin-top:18px}} h
 <h1>香港出發平機票</h1>
 <p class="sub">Kiwi.com 查價時間：{e(d["checked_at"])}（每個工作日早上更新）。來回、直航、玩 3 至 5 晚，價錢已包稅同附加費（港幣）。</p>
 <div class="seg view" role="tablist">
-<button data-view="cards" aria-pressed="true">卡片</button><button data-view="cal" aria-pressed="false">月曆</button><button data-view="hk" aria-pressed="false">國泰・港航・大灣區</button>
+<button data-view="cards" aria-pressed="true">卡片</button><button data-view="cal" aria-pressed="false">月曆</button><button data-view="hk" aria-pressed="false">國泰・港航・大灣區・HK Express</button>
 </div>
 <div id="view-cal" hidden>
 <p class="sub">每條橫條由出發日拉到回程日。<span class="legend bar jp">日本</span> <span class="legend bar as">亞洲其他</span> <span class="legend bar ww">亞洲以外</span> <span class="legend bar jp nb">斜紋 = 唔連寄艙行李</span>；紅字日子係星期日或者香港公眾假期；撳橫條去 Kiwi.com 睇。</p>
 {calendar(d)}
 </div>
 <div id="view-hk" hidden>
-<h2>國泰、香港航空、大灣區航空</h2>
-<p class="sub">日本、台灣、曼谷、首爾；直航來回、玩 3 至 5 晚、已連 1 件寄艙行李。每個城市比較三間航空公司各自最平一班，綠色係三間之中最平；撳一行去 Kiwi.com 睇。</p>
-<div class="grid">{"".join(hk_card(r) for r in sorted(d.get("hk_airlines", []), key=lambda r: min([o["price"] for o in r["options"].values() if o] or [99999])))}</div>
+<h2>國泰、香港航空、大灣區航空、HK Express</h2>
+<p class="sub">日本、台灣、曼谷、首爾；直航來回、玩 3 至 5 晚、國泰、香港航空、大灣區航空嘅價錢已連 1 件寄艙行李，綠色係三間之中最平。HK Express 嘅價錢冇寄艙行李（只有 1 件隨身物品），行李要另加，所以唔同其他三間直接比較。撳一行去 Kiwi.com 睇。</p>
+<div class="grid">{"".join(hk_card(r) for r in sorted(d.get("hk_airlines", []), key=lambda r: (min([o["price"] for k, o in r["options"].items() if o and k != "UO"] or [99999]), min([o["price"] for o in r["options"].values() if o] or [99999]))))}</div>
 </div>
 <div id="view-cards">
 <h2>日本</h2>
