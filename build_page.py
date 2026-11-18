@@ -180,7 +180,7 @@ body{{padding:12px}} h1{{font-size:20px}} h2{{font-size:16px;margin-top:18px}} h
 .seg button[aria-pressed="true"]{{background:#1f1e1d;color:#fff;border-color:#1f1e1d}} a{{color:#1f1e1d}} .foot{{font-size:11px;color:#8a8984;margin-top:20px;line-height:1.6}}
 </style></head><body>
 <h1>香港出發平機票</h1>
-<p class="sub">Kiwi.com 查價時間：{e(d["checked_at"])}（每個工作日早上更新）。來回、直航、玩 3 至 5 晚，價錢已包稅同附加費（港幣）。</p>
+<p class="sub">Kiwi.com 查價時間：{e(d["checked_at"])}（每個工作日早上更新）。來回、直航；星期四至六出發、星期日至二返，一定包一個週末，玩 2 至 4 晚（最多 3 日 AL）；價錢已包稅同附加費（港幣）。</p>
 <div class="seg view" role="tablist">
 <button data-view="cards" aria-pressed="true">卡片</button><button data-view="cal" aria-pressed="false">月曆</button><button data-view="hk" aria-pressed="false">Local Airline</button>
 </div>
@@ -190,7 +190,7 @@ body{{padding:12px}} h1{{font-size:20px}} h2{{font-size:16px;margin-top:18px}} h
 </div>
 <div id="view-hk" hidden>
 <h2>Local Airline：國泰、香港航空、大灣區航空、HK Express</h2>
-<p class="sub">日本、台灣、曼谷、首爾；直航來回、玩 3 至 5 晚、國泰、香港航空、大灣區航空嘅價錢已連 1 件寄艙行李，綠色係三間之中最平。HK Express 嘅價錢冇寄艙行李（只有 1 件隨身物品），行李要另加，所以唔同其他三間直接比較。撳一行去 Kiwi.com 睇。</p>
+<p class="sub">日本、台灣、曼谷、首爾；直航來回、包一個週末、玩 2 至 4 晚。國泰、香港航空、大灣區航空嘅價錢已連 1 件寄艙行李，綠色係三間之中最平。HK Express 嘅價錢冇寄艙行李（只有 1 件隨身物品），行李要另加，所以唔同其他三間直接比較。撳一行去 Kiwi.com 睇。</p>
 <div class="grid">{"".join(hk_card(r) for r in sorted(d.get("hk_airlines", []), key=lambda r: (min([o["price"] for k, o in r["options"].items() if o and k != "UO"] or [99999]), min([o["price"] for o in r["options"].values() if o] or [99999]))))}</div>
 </div>
 <div id="view-cards">
@@ -204,7 +204,7 @@ body{{padding:12px}} h1{{font-size:20px}} h2{{font-size:16px;margin-top:18px}} h
 <h2>亞洲最平 10 個城市（連寄艙行李）</h2>
 <div class="grid">{"".join(asia_card(i + 1, r) for i, r in enumerate(d["asia"]))}</div>
 <h2>亞洲以外最平 10 個城市（連寄艙行李）</h2>
-<p class="sub">歐洲、澳紐、美加等；玩 5 至 10 晚；最多轉機一次，同一張票（除咗標明「兩張單程票」）。</p>
+<p class="sub">歐洲、澳紐、美加等；星期五或六出發、下個星期日或一返，跨兩個週末，玩 8 至 10 晚；最多轉機一次，同一張票（除咗標明「兩張單程票」）。</p>
 <div class="grid">{"".join(world_card(i + 1, r) for i, r in enumerate(d.get("world", [])))}</div>
 </div>
 <p class="foot">價錢以查價時為準，隨時會變，訂票前請喺航空公司官網再核實。「兩張單程票」即去程同回程分開出票，去程延誤唔保障回程。AL 按星期一至五上班計，已扣香港公眾假期，出發日同回程日都計一整日。</p>
