@@ -277,6 +277,16 @@
  ],
  "world": [
   {
+   "city": "悉尼 Sydney",
+   "price": 3518,
+   "depart": "2027-03-13",
+   "return": "2027-03-21",
+   "airline": "香港航空",
+   "stops": "直航",
+   "note": "",
+   "link": "https://kiwi.com/u/6thg2jtjux"
+  },
+  {
    "city": "珀斯 Perth",
    "price": 5437,
    "depart": "2027-05-14",
@@ -285,16 +295,6 @@
    "stops": "去程經胡志明市、回程直航",
    "note": "兩張單程票",
    "link": "https://kiwi.com/u/7m5dvt4dcr"
-  },
-  {
-   "city": "悉尼 Sydney",
-   "price": 5676,
-   "depart": "2027-05-15",
-   "return": "2027-05-24",
-   "airline": "香港航空",
-   "stops": "直航",
-   "note": "",
-   "link": "https://kiwi.com/u/cmzw6nq829"
   },
   {
    "city": "伊斯坦堡 Istanbul",
