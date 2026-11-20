@@ -1,278 +1,278 @@
 {
- "checked_at": "2026-11-19 08:45",
+ "checked_at": "2026-11-20 08:50",
  "japan": [
   {
    "city": "沖繩 Okinawa",
    "bag": {
-    "price": 2169,
+    "price": 2168,
     "depart": "2027-04-16",
     "return": "2027-04-20",
     "airline": "香港航空",
     "note": "",
-    "link": "https://kiwi.com/u/cvpqrh9m2j"
+    "link": "https://kiwi.com/u/kcg6utw772"
    },
    "nobag": {
-    "price": 1996,
-    "depart": "2026-12-05",
-    "return": "2026-12-08",
+    "price": 2006,
+    "depart": "2027-01-23",
+    "return": "2027-01-25",
     "airline": "HK Express",
     "note": "兩張單程票",
-    "link": "https://kiwi.com/u/wx4zgqfhx9"
+    "link": "https://kiwi.com/u/k2t3wt7ws3"
    }
   },
   {
    "city": "福岡 Fukuoka",
    "bag": {
-    "price": 2446,
-    "depart": "2027-03-04",
-    "return": "2027-03-08",
-    "airline": "香港航空",
-    "note": "",
-    "link": "https://kiwi.com/u/mghxhd5fbu"
-   },
-   "nobag": {
-    "price": 2022,
+    "price": 2656,
     "depart": "2027-01-28",
     "return": "2027-02-01",
-    "airline": "HK Express",
-    "note": "兩張單程票",
-    "link": "https://kiwi.com/u/k8upd3ujtp"
-   }
-  },
-  {
-   "city": "東京 Tokyo",
-   "bag": {
-    "price": 2651,
-    "depart": "2026-11-27",
-    "return": "2026-11-29",
     "airline": "香港航空",
     "note": "",
-    "link": "https://kiwi.com/u/smxw8tgwsd"
+    "link": "https://kiwi.com/u/kh9n2ugc3w"
    },
    "nobag": {
-    "price": 2420,
-    "depart": "2026-12-18",
-    "return": "2026-12-21",
+    "price": 2024,
+    "depart": "2027-03-12",
+    "return": "2027-03-16",
     "airline": "HK Express",
-    "note": "成田去、羽田返，兩張單程票",
-    "link": "https://kiwi.com/u/3mnhjz5hr3"
+    "note": "兩張單程票",
+    "link": "https://kiwi.com/u/v4vvdqmksk"
    }
   },
   {
    "city": "大阪 Osaka",
    "bag": {
-    "price": 2812,
-    "depart": "2027-01-08",
-    "return": "2027-01-12",
-    "airline": "樂桃",
-    "note": "回程 00:45 抵港，兩張單程票",
-    "link": "https://kiwi.com/u/p5vnwxgt46"
+    "price": 2664,
+    "depart": "2026-12-04",
+    "return": "2026-12-08",
+    "airline": "香港航空",
+    "note": "",
+    "link": "https://kiwi.com/u/u5zggmdr6w"
    },
    "nobag": {
-    "price": 2217,
+    "price": 2083,
     "depart": "2027-01-08",
     "return": "2027-01-12",
     "airline": "樂桃",
     "note": "回程 00:45 抵港，兩張單程票",
-    "link": "https://kiwi.com/u/yu72bnhm3d"
+    "link": "https://kiwi.com/u/pw5tvggfxz"
    }
   },
   {
-   "city": "札幌 Sapporo",
+   "city": "東京 Tokyo",
    "bag": {
-    "price": 3785,
-    "depart": "2027-02-19",
-    "return": "2027-02-23",
+    "price": 2799,
+    "depart": "2027-01-08",
+    "return": "2027-01-11",
     "airline": "香港航空",
     "note": "",
-    "link": "https://kiwi.com/u/s8u7utz5ds"
+    "link": "https://kiwi.com/u/dqbmrczynb"
    },
    "nobag": {
-    "price": 3620,
-    "depart": "2026-11-20",
-    "return": "2026-11-24",
-    "airline": "大灣區航空",
-    "note": "",
-    "link": "https://kiwi.com/u/545huxpvkg"
+    "price": 2088,
+    "depart": "2026-12-03",
+    "return": "2026-12-07",
+    "airline": "HK Express / 捷星日本",
+    "note": "羽田去、成田返，兩張單程票",
+    "link": "https://kiwi.com/u/dmr835gmr2"
    }
   },
   {
    "city": "仙台 Sendai",
    "bag": {
-    "price": 3926,
-    "depart": "2027-01-07",
-    "return": "2027-01-11",
+    "price": 3963,
+    "depart": "2027-01-28",
+    "return": "2027-02-01",
     "airline": "大灣區航空",
     "note": "兩張單程票",
-    "link": "https://kiwi.com/u/46mwy4duxr"
+    "link": "https://kiwi.com/u/vtjq2jphzq"
    },
    "nobag": {
-    "price": 2927,
+    "price": 2880,
     "depart": "2027-03-12",
     "return": "2027-03-16",
     "airline": "HK Express",
     "note": "兩張單程票",
-    "link": "https://kiwi.com/u/m2jtx3474f"
+    "link": "https://kiwi.com/u/ynk22gzz82"
    }
   },
   {
    "city": "名古屋 Nagoya",
    "bag": {
-    "price": 4195,
-    "depart": "2027-01-09",
-    "return": "2027-01-12",
+    "price": 4189,
+    "depart": "2027-01-23",
+    "return": "2027-01-25",
     "airline": "國泰",
     "note": "",
-    "link": "https://kiwi.com/u/7wxxrpuxfg"
+    "link": "https://kiwi.com/u/2cx73s9dyy"
    },
    "nobag": {
-    "price": 2519,
+    "price": 2515,
     "depart": "2026-12-11",
     "return": "2026-12-15",
     "airline": "HK Express",
-    "note": "兩張單程票",
-    "link": "https://kiwi.com/u/pb3kgshxrx"
+    "note": "回程 00:30 抵港，兩張單程票",
+    "link": "https://kiwi.com/u/9y3qcc3924"
+   }
+  },
+  {
+   "city": "札幌 Sapporo",
+   "bag": {
+    "price": 4543,
+    "depart": "2027-03-04",
+    "return": "2027-03-08",
+    "airline": "香港航空",
+    "note": "",
+    "link": "https://kiwi.com/u/8whu3ry8z6"
+   },
+   "nobag": {
+    "price": 3980,
+    "depart": "2027-02-26",
+    "return": "2027-03-02",
+    "airline": "大灣區航空",
+    "note": "",
+    "link": "https://kiwi.com/u/p297cdwhqj"
    }
   },
   {
    "city": "石垣 Ishigaki",
    "bag": null,
    "nobag": {
-    "price": 2422,
+    "price": 2418,
     "depart": "2027-04-10",
     "return": "2027-04-12",
     "airline": "HK Express",
     "note": "兩張單程票",
-    "link": "https://kiwi.com/u/bs5bs8zzrd"
-   }
-  },
-  {
-   "city": "高松 Takamatsu",
-   "bag": null,
-   "nobag": {
-    "price": 2478,
-    "depart": "2027-01-15",
-    "return": "2027-01-18",
-    "airline": "HK Express",
-    "note": "兩張單程票",
-    "link": "https://kiwi.com/u/sfyydnfv88"
+    "link": "https://kiwi.com/u/n69mukgpvd"
    }
   },
   {
    "city": "廣島 Hiroshima",
    "bag": null,
    "nobag": {
-    "price": 2722,
-    "depart": "2027-02-19",
-    "return": "2027-02-22",
+    "price": 2473,
+    "depart": "2027-01-29",
+    "return": "2027-02-01",
     "airline": "HK Express",
     "note": "兩張單程票",
-    "link": "https://kiwi.com/u/xgf8j74696"
+    "link": "https://kiwi.com/u/ypcvxncn8d"
+   }
+  },
+  {
+   "city": "高松 Takamatsu",
+   "bag": null,
+   "nobag": {
+    "price": 2486,
+    "depart": "2027-01-22",
+    "return": "2027-01-24",
+    "airline": "HK Express",
+    "note": "兩張單程票",
+    "link": "https://kiwi.com/u/37dn4d53yr"
    }
   },
   {
    "city": "小松 Komatsu",
    "bag": null,
    "nobag": {
-    "price": 2874,
-    "depart": "2027-03-13",
-    "return": "2027-03-16",
+    "price": 2850,
+    "depart": "2027-02-27",
+    "return": "2027-03-02",
     "airline": "HK Express",
     "note": "兩張單程票",
-    "link": "https://kiwi.com/u/h5mmbr7hmy"
+    "link": "https://kiwi.com/u/kdbqmbsymg"
    }
   }
  ],
  "asia": [
   {
+   "city": "峴港 Da Nang",
+   "price": 1229,
+   "depart": "2027-01-22",
+   "return": "2027-01-25",
+   "airline": "香港航空",
+   "note": "回程 23:50 抵港",
+   "link": "https://kiwi.com/u/gfs25u32tu"
+  },
+  {
    "city": "上海 Shanghai",
-   "price": 1439,
-   "depart": "2026-11-28",
-   "return": "2026-12-01",
+   "price": 1276,
+   "depart": "2026-12-10",
+   "return": "2026-12-14",
    "airline": "吉祥航空",
-   "note": "回程早機 07:55",
-   "link": "https://kiwi.com/u/tg3fu84zk2"
+   "note": "回程早機 08:00",
+   "link": "https://kiwi.com/u/hrvq4ybbzw"
   },
   {
    "city": "濟州 Jeju",
-   "price": 1461,
+   "price": 1411,
    "depart": "2026-12-04",
    "return": "2026-12-08",
    "airline": "真航空",
    "note": "來回紅眼機，兩張單程票",
-   "link": "https://kiwi.com/u/c5csqxqmwf"
-  },
-  {
-   "city": "峴港 Da Nang",
-   "price": 1577,
-   "depart": "2027-05-07",
-   "return": "2027-05-11",
-   "airline": "香港航空",
-   "note": "",
-   "link": "https://kiwi.com/u/6wcxcn3nmk"
+   "link": "https://kiwi.com/u/9mpfh2gx7p"
   },
   {
    "city": "台北 Taipei",
-   "price": 1650,
-   "depart": "2026-12-10",
-   "return": "2026-12-13",
+   "price": 1645,
+   "depart": "2026-12-04",
+   "return": "2026-12-07",
    "airline": "香港航空",
    "note": "",
-   "link": "https://kiwi.com/u/zf4k4zdqtu"
+   "link": "https://kiwi.com/u/p7b8cx2zu6"
   },
   {
    "city": "北京 Beijing",
-   "price": 1903,
-   "depart": "2027-03-13",
-   "return": "2027-03-16",
-   "airline": "香港航空",
+   "price": 1690,
+   "depart": "2026-12-04",
+   "return": "2026-12-08",
+   "airline": "南航",
    "note": "大興機場",
-   "link": "https://kiwi.com/u/v8qtuch7d5"
-  },
-  {
-   "city": "首爾 Seoul",
-   "price": 1957,
-   "depart": "2026-11-28",
-   "return": "2026-12-01",
-   "airline": "香港航空",
-   "note": "來回紅眼機",
-   "link": "https://kiwi.com/u/u5vmf3nddr"
+   "link": "https://kiwi.com/u/j6w8gpvwmg"
   },
   {
    "city": "高雄 Kaohsiung",
-   "price": 1959,
-   "depart": "2027-01-29",
-   "return": "2027-02-02",
+   "price": 1996,
+   "depart": "2027-01-16",
+   "return": "2027-01-19",
    "airline": "國泰",
    "note": "回程早機 06:55",
-   "link": "https://kiwi.com/u/z957wmsd4x"
-  },
-  {
-   "city": "胡志明市 Ho Chi Minh City",
-   "price": 1969,
-   "depart": "2027-04-24",
-   "return": "2027-04-26",
-   "airline": "越捷航空",
-   "note": "兩張單程票",
-   "link": "https://kiwi.com/u/gp9shjju4j"
+   "link": "https://kiwi.com/u/unmxrzjunh"
   },
   {
    "city": "曼谷 Bangkok",
-   "price": 2001,
+   "price": 1998,
    "depart": "2026-12-18",
    "return": "2026-12-20",
    "airline": "香港航空",
-   "note": "回程 02:40 紅眼機",
-   "link": "https://kiwi.com/u/26bc92jxjj"
+   "note": "回程 01:55 紅眼機",
+   "link": "https://kiwi.com/u/suhwd97m45"
   },
   {
-   "city": "布吉 Phuket",
-   "price": 2128,
-   "depart": "2027-02-27",
-   "return": "2027-03-01",
+   "city": "胡志明市 Ho Chi Minh City",
+   "price": 2002,
+   "depart": "2026-11-28",
+   "return": "2026-12-01",
+   "airline": "越捷航空",
+   "note": "兩張單程票",
+   "link": "https://kiwi.com/u/p2tpps9gqg"
+  },
+  {
+   "city": "首爾 Seoul",
+   "price": 2072,
+   "depart": "2027-01-14",
+   "return": "2027-01-17",
+   "airline": "香港航空",
+   "note": "來回紅眼機",
+   "link": "https://kiwi.com/u/5ufwjtnkgu"
+  },
+  {
+   "city": "沖繩 Okinawa",
+   "price": 2168,
+   "depart": "2027-04-16",
+   "return": "2027-04-20",
    "airline": "香港航空",
    "note": "",
-   "link": "https://kiwi.com/u/f3cb6pzu2w"
+   "link": "https://kiwi.com/u/kcg6utw772"
   }
  ],
  "world": [
@@ -280,175 +280,175 @@
    "city": "悉尼 Sydney",
    "price": 3518,
    "depart": "2027-03-13",
-   "return": "2027-03-21",
+   "return": "2027-03-22",
    "airline": "香港航空",
    "stops": "直航",
    "note": "",
-   "link": "https://kiwi.com/u/6thg2jtjux"
+   "link": "https://kiwi.com/u/9p734g66xm"
   },
   {
    "city": "珀斯 Perth",
-   "price": 5437,
+   "price": 5423,
    "depart": "2027-05-14",
    "return": "2027-05-24",
    "airline": "越捷航空 / 國泰",
    "stops": "去程經胡志明市、回程直航",
    "note": "兩張單程票",
-   "link": "https://kiwi.com/u/7m5dvt4dcr"
-  },
-  {
-   "city": "伊斯坦堡 Istanbul",
-   "price": 6288,
-   "depart": "2026-12-05",
-   "return": "2026-12-13",
-   "airline": "土耳其航空",
-   "stops": "直航",
-   "note": "",
-   "link": "https://kiwi.com/u/kbjrm5r3cz"
-  },
-  {
-   "city": "慕尼黑 Munich",
-   "price": 6336,
-   "depart": "2026-11-20",
-   "return": "2026-11-29",
-   "airline": "越南航空 / 國航",
-   "stops": "去程經河內、回程經上海",
-   "note": "兩張單程票",
-   "link": "https://kiwi.com/u/gz3wnf8kf4"
-  },
-  {
-   "city": "布拉格 Prague",
-   "price": 6411,
-   "depart": "2026-11-21",
-   "return": "2026-11-29",
-   "airline": "土耳其航空",
-   "stops": "經伊斯坦堡轉機",
-   "note": "",
-   "link": "https://kiwi.com/u/cvjt9z4j7q"
-  },
-  {
-   "city": "法蘭克福 Frankfurt",
-   "price": 6450,
-   "depart": "2026-11-20",
-   "return": "2026-11-29",
-   "airline": "越南航空 / 國航",
-   "stops": "去程經河內、回程經北京",
-   "note": "兩張單程票",
-   "link": "https://kiwi.com/u/6rc52v2cs9"
-  },
-  {
-   "city": "倫敦 London",
-   "price": 6553,
-   "depart": "2026-11-20",
-   "return": "2026-11-29",
-   "airline": "南航 / 國航",
-   "stops": "經北京轉機",
-   "note": "兩張單程票",
-   "link": "https://kiwi.com/u/td4x6qvxr7"
-  },
-  {
-   "city": "阿姆斯特丹 Amsterdam",
-   "price": 6872,
-   "depart": "2026-11-21",
-   "return": "2026-11-29",
-   "airline": "土耳其航空 / 南航",
-   "stops": "去程經伊斯坦堡、回程經北京",
-   "note": "兩張單程票",
-   "link": "https://kiwi.com/u/95dnthwvd5"
-  },
-  {
-   "city": "布里斯本 Brisbane",
-   "price": 6952,
-   "depart": "2027-02-26",
-   "return": "2027-03-08",
-   "airline": "新畿內亞航空 / 國泰",
-   "stops": "去程經莫士比港、回程直航",
-   "note": "兩張單程票",
-   "link": "https://kiwi.com/u/zutvfwn69f"
+   "link": "https://kiwi.com/u/x6xdw27hs8"
   },
   {
    "city": "墨爾本 Melbourne",
-   "price": 7180,
-   "depart": "2026-11-20",
-   "return": "2026-11-29",
-   "airline": "汶萊皇家航空 / 香港航空",
-   "stops": "去程經汶萊、回程直航",
+   "price": 5771,
+   "depart": "2027-02-20",
+   "return": "2027-03-01",
+   "airline": "香港航空",
+   "stops": "直航",
+   "note": "",
+   "link": "https://kiwi.com/u/wv786w563x"
+  },
+  {
+   "city": "布里斯本 Brisbane",
+   "price": 6944,
+   "depart": "2027-05-14",
+   "return": "2027-05-24",
+   "airline": "新畿內亞航空 / 國泰",
+   "stops": "去程經莫士比港、回程直航",
    "note": "兩張單程票",
-   "link": "https://kiwi.com/u/wc8jr7wuzd"
+   "link": "https://kiwi.com/u/tnr63n2ux3"
+  },
+  {
+   "city": "伊斯坦堡 Istanbul",
+   "price": 7054,
+   "depart": "2027-01-09",
+   "return": "2027-01-18",
+   "airline": "卡塔爾航空 / 土耳其航空",
+   "stops": "去程經多哈、回程直航",
+   "note": "兩張單程票",
+   "link": "https://kiwi.com/u/pvn3rzcgbj"
+  },
+  {
+   "city": "奧克蘭 Auckland",
+   "price": 7442,
+   "depart": "2026-12-11",
+   "return": "2026-12-20",
+   "airline": "海南航空",
+   "stops": "經海口轉機",
+   "note": "",
+   "link": "https://kiwi.com/u/kdvjq3k7wc"
+  },
+  {
+   "city": "洛杉磯 Los Angeles",
+   "price": 7473,
+   "depart": "2027-01-15",
+   "return": "2027-01-25",
+   "airline": "星宇航空 / 國泰",
+   "stops": "去程經台北、回程直航",
+   "note": "兩張單程票",
+   "link": "https://kiwi.com/u/v2m22u5vcq"
+  },
+  {
+   "city": "溫哥華 Vancouver",
+   "price": 7754,
+   "depart": "2027-03-13",
+   "return": "2027-03-22",
+   "airline": "香港航空",
+   "stops": "直航",
+   "note": "",
+   "link": "https://kiwi.com/u/9h65fmzg28"
+  },
+  {
+   "city": "赫爾辛基 Helsinki",
+   "price": 8064,
+   "depart": "2027-05-14",
+   "return": "2027-05-24",
+   "airline": "南航 / 芬蘭航空",
+   "stops": "去程經北京、回程直航",
+   "note": "兩張單程票",
+   "link": "https://kiwi.com/u/q9k2jd3r94"
+  },
+  {
+   "city": "西雅圖 Seattle",
+   "price": 8488,
+   "depart": "2026-11-21",
+   "return": "2026-11-30",
+   "airline": "長榮航空 / 國泰",
+   "stops": "去程經台北、回程直航",
+   "note": "兩張單程票",
+   "link": "https://kiwi.com/u/qd7pvnkw34"
   }
  ],
  "hk_airlines": [
-  {
-   "city": "高雄 Kaohsiung",
-   "options": {
-    "CX": {
-     "price": 1959,
-     "depart": "2027-01-14",
-     "return": "2027-01-18",
-     "out": "CX458 16:45",
-     "in": "CX459 19:25",
-     "note": "",
-     "link": "https://kiwi.com/u/uvjmkuuppv"
-    },
-    "HX": {
-     "price": 2647,
-     "depart": "2026-11-27",
-     "return": "2026-12-01",
-     "out": "HX1846 12:15",
-     "in": "HX1849 16:40",
-     "note": "",
-     "link": "https://kiwi.com/u/ugsvnrgufs"
-    },
-    "HB": null,
-    "UO": {
-     "price": 1131,
-     "depart": "2027-01-09",
-     "return": "2027-01-12",
-     "out": "UO134 18:50",
-     "in": "UO131 10:10",
-     "note": "",
-     "link": "https://kiwi.com/u/trrz2t533f"
-    }
-   }
-  },
   {
    "city": "台北 Taipei",
    "options": {
     "CX": {
      "price": 1959,
-     "depart": "2027-03-05",
-     "return": "2027-03-07",
+     "depart": "2027-02-19",
+     "return": "2027-02-22",
      "out": "CX488 08:00",
      "in": "CX469 22:25",
      "note": "",
-     "link": "https://kiwi.com/u/kw8u7d4qdu"
+     "link": "https://kiwi.com/u/b79n8kpn5q"
     },
     "HX": {
      "price": 1650,
-     "depart": "2026-12-10",
-     "return": "2026-12-13",
-     "out": "HX252 09:00",
+     "depart": "2026-12-05",
+     "return": "2026-12-07",
+     "out": "HX260 16:30",
      "in": "HX253 11:45",
      "note": "",
-     "link": "https://kiwi.com/u/pvd4dbthu7"
+     "link": "https://kiwi.com/u/sznbcq8bjg"
     },
     "HB": {
-     "price": 2182,
-     "depart": "2026-12-10",
-     "return": "2026-12-13",
-     "out": "HB704 18:45",
-     "in": "HB729 23:35",
+     "price": 2095,
+     "depart": "2026-11-28",
+     "return": "2026-12-01",
+     "out": "HB704 18:55",
+     "in": "HB703 11:35",
      "note": "兩張單程票",
-     "link": "https://kiwi.com/u/kxsr7c925m"
+     "link": "https://kiwi.com/u/krygbfuymy"
     },
     "UO": {
-     "price": 1132,
+     "price": 1119,
+     "depart": "2027-01-09",
+     "return": "2027-01-12",
+     "out": "UO116 18:40",
+     "in": "UO117 21:15",
+     "note": "",
+     "link": "https://kiwi.com/u/bzmxuchrnh"
+    }
+   }
+  },
+  {
+   "city": "高雄 Kaohsiung",
+   "options": {
+    "CX": {
+     "price": 1960,
+     "depart": "2026-12-05",
+     "return": "2026-12-07",
+     "out": "CX424 10:40",
+     "in": "CX449 06:55",
+     "note": "",
+     "link": "https://kiwi.com/u/x88xp4fvdp"
+    },
+    "HX": {
+     "price": 2650,
+     "depart": "2026-12-05",
+     "return": "2026-12-07",
+     "out": "HX1846 12:15",
+     "in": "HX1849 16:40",
+     "note": "",
+     "link": "https://kiwi.com/u/qjbkm2pfdd"
+    },
+    "HB": null,
+    "UO": {
+     "price": 1131,
      "depart": "2027-01-16",
      "return": "2027-01-19",
-     "out": "UO116 18:40",
-     "in": "UO113 14:50",
+     "out": "UO134 18:50",
+     "in": "UO131 10:10",
      "note": "",
-     "link": "https://kiwi.com/u/hbgqh4qddr"
+     "link": "https://kiwi.com/u/v397nffnwf"
     }
    }
   },
@@ -456,40 +456,40 @@
    "city": "曼谷 Bangkok",
    "options": {
     "CX": {
-     "price": 2753,
-     "depart": "2027-02-26",
-     "return": "2027-02-28",
-     "out": "CX615 09:55",
-     "in": "CX788 12:45",
+     "price": 2812,
+     "depart": "2027-02-19",
+     "return": "2027-02-22",
+     "out": "CX701 16:00",
+     "in": "CX706 17:00",
      "note": "",
-     "link": "https://kiwi.com/u/f844b6hmty"
+     "link": "https://kiwi.com/u/9rw4mmutuz"
     },
     "HX": {
-     "price": 2001,
+     "price": 1998,
      "depart": "2026-12-18",
-     "return": "2026-12-20",
+     "return": "2026-12-21",
      "out": "HX775 12:20",
-     "in": "HX780 01:55",
+     "in": "HX768 02:40",
      "note": "",
-     "link": "https://kiwi.com/u/5v2zvhj9qs"
+     "link": "https://kiwi.com/u/p4bhuxf4cf"
     },
     "HB": {
-     "price": 2664,
+     "price": 2685,
      "depart": "2026-11-26",
      "return": "2026-11-30",
      "out": "HB295 20:55",
      "in": "HB296 01:45",
      "note": "兩張單程票",
-     "link": "https://kiwi.com/u/rx5qvsgp47"
+     "link": "https://kiwi.com/u/zxsgc66n7h"
     },
     "UO": {
-     "price": 1559,
+     "price": 1561,
      "depart": "2026-11-28",
      "return": "2026-12-01",
-     "out": "UO702 16:55",
-     "in": "UO735 00:35",
+     "out": "UO734 21:40",
+     "in": "UO705 10:40",
      "note": "",
-     "link": "https://kiwi.com/u/vh59m9d7f8"
+     "link": "https://kiwi.com/u/p5sp32syqq"
     }
    }
   },
@@ -497,32 +497,32 @@
    "city": "首爾 Seoul",
    "options": {
     "CX": {
-     "price": 2925,
-     "depart": "2027-04-22",
-     "return": "2027-04-26",
-     "out": "CX418 14:25",
-     "in": "CX413 08:00",
+     "price": 2840,
+     "depart": "2026-11-27",
+     "return": "2026-11-30",
+     "out": "CX416 16:50",
+     "in": "CX427 01:55",
      "note": "",
-     "link": "https://kiwi.com/u/krgsmhdm75"
+     "link": "https://kiwi.com/u/dcrxdmrzwx"
     },
     "HX": {
-     "price": 1957,
-     "depart": "2026-11-28",
-     "return": "2026-12-01",
-     "out": "HX624 21:00",
-     "in": "HX629 14:30",
+     "price": 2185,
+     "depart": "2026-12-05",
+     "return": "2026-12-07",
+     "out": "HX628 08:55",
+     "in": "HX625 02:35",
      "note": "",
-     "link": "https://kiwi.com/u/4hp4gfupdv"
+     "link": "https://kiwi.com/u/3usgmm29zv"
     },
     "HB": null,
     "UO": {
      "price": 1790,
-     "depart": "2027-01-28",
-     "return": "2027-02-01",
-     "out": "UO618 07:15",
+     "depart": "2027-01-29",
+     "return": "2027-02-02",
+     "out": "UO616 01:15",
      "in": "UO617 06:45",
      "note": "",
-     "link": "https://kiwi.com/u/6mtnr72gqf"
+     "link": "https://kiwi.com/u/tgs92pjcxf"
     }
    }
   },
@@ -530,40 +530,40 @@
    "city": "福岡 Fukuoka",
    "options": {
     "CX": {
-     "price": 3727,
+     "price": 3734,
      "depart": "2026-11-21",
      "return": "2026-11-24",
      "out": "CX528 15:45",
      "in": "CX529 21:05",
      "note": "",
-     "link": "https://kiwi.com/u/qbw342svcv"
+     "link": "https://kiwi.com/u/zj5b8ypn4z"
     },
     "HX": {
-     "price": 2446,
-     "depart": "2027-03-04",
-     "return": "2027-03-08",
+     "price": 2656,
+     "depart": "2027-01-28",
+     "return": "2027-02-01",
      "out": "HX638 08:15",
      "in": "HX639 13:25",
      "note": "",
-     "link": "https://kiwi.com/u/s6zypyjbys"
+     "link": "https://kiwi.com/u/xfg4kk8sjb"
     },
     "HB": {
-     "price": 3519,
-     "depart": "2027-03-04",
-     "return": "2027-03-08",
-     "out": "HB2386 10:35",
+     "price": 3578,
+     "depart": "2027-01-15",
+     "return": "2027-01-18",
+     "out": "HB308 08:45",
      "in": "HB2387 14:00",
      "note": "",
-     "link": "https://kiwi.com/u/r352cqq9zt"
+     "link": "https://kiwi.com/u/dnuzm3pfh9"
     },
     "UO": {
-     "price": 2023,
-     "depart": "2027-01-28",
-     "return": "2027-02-01",
+     "price": 2024,
+     "depart": "2027-03-12",
+     "return": "2027-03-16",
      "out": "UO638 12:55",
      "in": "UO867 08:10",
      "note": "",
-     "link": "https://kiwi.com/u/bmwv4gt62z"
+     "link": "https://kiwi.com/u/jmrsr6z78z"
     }
    }
   },
@@ -571,65 +571,40 @@
    "city": "東京 Tokyo",
    "options": {
     "CX": {
-     "price": 4065,
-     "depart": "2026-11-28",
-     "return": "2026-12-01",
-     "out": "CX500 15:25 成田",
-     "in": "CX505 18:10 成田",
+     "price": 4063,
+     "depart": "2027-01-08",
+     "return": "2027-01-11",
+     "out": "CX520 10:30 成田",
+     "in": "CX521 16:50 成田",
      "note": "",
-     "link": "https://kiwi.com/u/6c3uqxmgkd"
+     "link": "https://kiwi.com/u/h38qvrjyyh"
     },
     "HX": {
-     "price": 2651,
-     "depart": "2026-11-27",
-     "return": "2026-11-29",
-     "out": "HX608 09:10 成田",
+     "price": 2800,
+     "depart": "2027-01-08",
+     "return": "2027-01-11",
+     "out": "HX604 08:10 成田",
      "in": "HX607 09:05 成田",
      "note": "",
-     "link": "https://kiwi.com/u/tumk8knbsu"
+     "link": "https://kiwi.com/u/24wxmsxd3v"
     },
     "HB": {
-     "price": 3611,
-     "depart": "2026-11-20",
-     "return": "2026-11-24",
+     "price": 3798,
+     "depart": "2027-01-14",
+     "return": "2027-01-18",
      "out": "HB320 09:05 成田",
      "in": "HB321 15:10 成田",
-     "note": "兩張單程票",
-     "link": "https://kiwi.com/u/tmbnbdc7z4"
+     "note": "",
+     "link": "https://kiwi.com/u/m6s62b2nmz"
     },
     "UO": {
-     "price": 2276,
+     "price": 2241,
      "depart": "2027-01-21",
      "return": "2027-01-25",
-     "out": "UO622 17:55 羽田",
+     "out": "UO652 14:55 成田",
      "in": "UO625 06:35 羽田",
      "note": "",
-     "link": "https://kiwi.com/u/q4wtdzsyxs"
-    }
-   }
-  },
-  {
-   "city": "名古屋 Nagoya",
-   "options": {
-    "CX": {
-     "price": 4195,
-     "depart": "2027-01-09",
-     "return": "2027-01-12",
-     "out": "CX532 16:25",
-     "in": "CX563 09:35",
-     "note": "",
-     "link": "https://kiwi.com/u/dthut2swqs"
-    },
-    "HX": null,
-    "HB": null,
-    "UO": {
-     "price": 2519,
-     "depart": "2026-12-11",
-     "return": "2026-12-15",
-     "out": "UO684 15:15",
-     "in": "UO685 20:40",
-     "note": "",
-     "link": "https://kiwi.com/u/nknbdgkqd6"
+     "link": "https://kiwi.com/u/mrzkdhp496"
     }
    }
   },
@@ -637,40 +612,65 @@
    "city": "大阪 Osaka",
    "options": {
     "CX": {
-     "price": 4199,
-     "depart": "2027-01-14",
-     "return": "2027-01-18",
-     "out": "CX598 13:20",
+     "price": 4095,
+     "depart": "2026-12-04",
+     "return": "2026-12-07",
+     "out": "CX506 10:45",
      "in": "CX561 17:00",
      "note": "",
-     "link": "https://kiwi.com/u/k93rwyd7uv"
+     "link": "https://kiwi.com/u/48883zhujt"
     },
     "HX": {
-     "price": 2986,
-     "depart": "2026-11-20",
-     "return": "2026-11-24",
-     "out": "HX614 08:40",
-     "in": "HX615 14:15",
+     "price": 2664,
+     "depart": "2026-12-04",
+     "return": "2026-12-08",
+     "out": "HX612 14:40",
+     "in": "HX613 20:05",
      "note": "",
-     "link": "https://kiwi.com/u/vmvv2mtfth"
+     "link": "https://kiwi.com/u/n2w9vddyzu"
     },
     "HB": {
-     "price": 3552,
-     "depart": "2026-12-10",
-     "return": "2026-12-13",
-     "out": "HB2356 14:35",
-     "in": "HB2359 22:10",
+     "price": 3535,
+     "depart": "2026-12-12",
+     "return": "2026-12-15",
+     "out": "HB2358 16:45",
+     "in": "HB353 13:30",
      "note": "兩張單程票",
-     "link": "https://kiwi.com/u/dzdj8smudd"
+     "link": "https://kiwi.com/u/4cq8j4cdv4"
     },
     "UO": {
-     "price": 2640,
-     "depart": "2026-12-10",
-     "return": "2026-12-14",
+     "price": 2636,
+     "depart": "2027-01-08",
+     "return": "2027-01-12",
      "out": "UO862 15:45",
      "in": "UO689 20:15",
      "note": "",
-     "link": "https://kiwi.com/u/sm3g3xbxg6"
+     "link": "https://kiwi.com/u/72b746h3p2"
+    }
+   }
+  },
+  {
+   "city": "名古屋 Nagoya",
+   "options": {
+    "CX": {
+     "price": 4189,
+     "depart": "2027-01-23",
+     "return": "2027-01-25",
+     "out": "CX532 16:25",
+     "in": "CX563 09:35",
+     "note": "",
+     "link": "https://kiwi.com/u/x8bj2wj2rm"
+    },
+    "HX": null,
+    "HB": null,
+    "UO": {
+     "price": 2515,
+     "depart": "2026-12-11",
+     "return": "2026-12-15",
+     "out": "UO684 15:15",
+     "in": "UO685 20:40",
+     "note": "",
+     "link": "https://kiwi.com/u/cyuzmhkr7s"
     }
    }
   },
@@ -678,31 +678,31 @@
    "city": "札幌 Sapporo",
    "options": {
     "CX": {
-     "price": 4955,
+     "price": 5094,
      "depart": "2027-02-19",
-     "return": "2027-02-23",
+     "return": "2027-02-22",
      "out": "CX586 12:20",
-     "in": "CX583 17:15",
+     "in": "CX587 19:05",
      "note": "",
-     "link": "https://kiwi.com/u/sfgb58p4rj"
+     "link": "https://kiwi.com/u/mzkwywn6zv"
     },
     "HX": {
-     "price": 3785,
-     "depart": "2027-02-19",
-     "return": "2027-02-23",
-     "out": "HX690 08:30",
-     "in": "HX693 16:00",
+     "price": 4543,
+     "depart": "2027-03-05",
+     "return": "2027-03-09",
+     "out": "HX692 09:15",
+     "in": "HX691 15:20",
      "note": "",
-     "link": "https://kiwi.com/u/dyduss2v57"
+     "link": "https://kiwi.com/u/ntpf4cmwnq"
     },
     "HB": {
-     "price": 4400,
-     "depart": "2026-11-20",
-     "return": "2026-11-24",
+     "price": 4760,
+     "depart": "2027-02-26",
+     "return": "2027-03-02",
      "out": "HB880 09:15",
      "in": "HB881 16:00",
      "note": "",
-     "link": "https://kiwi.com/u/cc46p2ytwb"
+     "link": "https://kiwi.com/u/f3sxdjjzwv"
     },
     "UO": null
    }
@@ -712,31 +712,31 @@
    "options": {
     "CX": null,
     "HX": {
-     "price": 2169,
-     "depart": "2027-04-16",
-     "return": "2027-04-20",
-     "out": "HX658 11:20",
-     "in": "HX659 16:10",
+     "price": 2168,
+     "depart": "2027-01-22",
+     "return": "2027-01-26",
+     "out": "HX658 11:50",
+     "in": "HX679 13:50",
      "note": "",
-     "link": "https://kiwi.com/u/6pwcw4ns9h"
+     "link": "https://kiwi.com/u/29tcwdhzwt"
     },
     "HB": {
-     "price": 3308,
-     "depart": "2026-12-11",
-     "return": "2026-12-13",
+     "price": 2996,
+     "depart": "2027-01-15",
+     "return": "2027-01-17",
      "out": "HB336 09:40",
      "in": "HB337 14:10",
-     "note": "",
-     "link": "https://kiwi.com/u/hy925xt6yk"
+     "note": "兩張單程票",
+     "link": "https://kiwi.com/u/sudrwfdnxm"
     },
     "UO": {
-     "price": 2006,
-     "depart": "2026-12-05",
-     "return": "2026-12-08",
+     "price": 2007,
+     "depart": "2027-01-23",
+     "return": "2027-01-26",
      "out": "UO824 15:50",
      "in": "UO821 11:55",
      "note": "",
-     "link": "https://kiwi.com/u/6fpmsdj37x"
+     "link": "https://kiwi.com/u/hyu2pxzw45"
     }
    }
   },
@@ -746,22 +746,22 @@
     "CX": null,
     "HX": null,
     "HB": {
-     "price": 3926,
-     "depart": "2027-01-07",
-     "return": "2027-01-11",
+     "price": 3963,
+     "depart": "2027-01-28",
+     "return": "2027-02-01",
      "out": "HB360 09:55",
      "in": "HB361 16:20",
      "note": "兩張單程票",
-     "link": "https://kiwi.com/u/xxcmtzn58h"
+     "link": "https://kiwi.com/u/ynfuggp8p8"
     },
     "UO": {
-     "price": 2927,
+     "price": 2880,
      "depart": "2027-03-12",
      "return": "2027-03-16",
      "out": "UO890 09:00",
      "in": "UO891 15:00",
      "note": "",
-     "link": "https://kiwi.com/u/fjc2htx4wr"
+     "link": "https://kiwi.com/u/9gh3rk5tsw"
     }
    }
   },
@@ -772,13 +772,13 @@
     "HX": null,
     "HB": null,
     "UO": {
-     "price": 1136,
-     "depart": "2026-12-18",
-     "return": "2026-12-22",
-     "out": "UO192 07:50",
-     "in": "UO183 20:35",
+     "price": 1135,
+     "depart": "2027-01-08",
+     "return": "2027-01-10",
+     "out": "UO172 10:50",
+     "in": "UO193 10:10",
      "note": "",
-     "link": "https://kiwi.com/u/xuj6rumcwz"
+     "link": "https://kiwi.com/u/j7nbtjdzk7"
     }
    }
   },
@@ -789,30 +789,13 @@
     "HX": null,
     "HB": null,
     "UO": {
-     "price": 2422,
+     "price": 2418,
      "depart": "2027-04-10",
      "return": "2027-04-12",
      "out": "UO858 07:40",
      "in": "UO879 11:30",
      "note": "",
-     "link": "https://kiwi.com/u/k3ug6g68cf"
-    }
-   }
-  },
-  {
-   "city": "高松 Takamatsu",
-   "options": {
-    "CX": null,
-    "HX": null,
-    "HB": null,
-    "UO": {
-     "price": 2478,
-     "depart": "2027-01-15",
-     "return": "2027-01-18",
-     "out": "UO642 09:20",
-     "in": "UO643 14:30",
-     "note": "",
-     "link": "https://kiwi.com/u/29np76cthh"
+     "link": "https://kiwi.com/u/dn9jmcckgj"
     }
    }
   },
@@ -823,13 +806,30 @@
     "HX": null,
     "HB": null,
     "UO": {
-     "price": 2722,
-     "depart": "2027-02-19",
-     "return": "2027-02-22",
+     "price": 2473,
+     "depart": "2027-01-29",
+     "return": "2027-02-01",
      "out": "UO822 09:30",
      "in": "UO823 14:40",
      "note": "",
-     "link": "https://kiwi.com/u/wumrj74n62"
+     "link": "https://kiwi.com/u/k7tju3tzs3"
+    }
+   }
+  },
+  {
+   "city": "高松 Takamatsu",
+   "options": {
+    "CX": null,
+    "HX": null,
+    "HB": null,
+    "UO": {
+     "price": 2486,
+     "depart": "2027-01-22",
+     "return": "2027-01-24",
+     "out": "UO642 09:20",
+     "in": "UO643 14:30",
+     "note": "",
+     "link": "https://kiwi.com/u/3f7qsmq8nc"
     }
    }
   },
@@ -840,13 +840,13 @@
     "HX": null,
     "HB": null,
     "UO": {
-     "price": 2874,
-     "depart": "2027-03-13",
-     "return": "2027-03-16",
+     "price": 2850,
+     "depart": "2027-02-27",
+     "return": "2027-03-02",
      "out": "UO814 09:30",
      "in": "UO815 14:50",
      "note": "",
-     "link": "https://kiwi.com/u/wq4c79437z"
+     "link": "https://kiwi.com/u/hcpg3dm56p"
     }
    }
   }
